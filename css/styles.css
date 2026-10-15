@@ -1,0 +1,94 @@
+
+ @import url();
+
+*{
+   box-sizing: border-box;
+  }
+
+:root{
+  --ink: #14202E;
+  --paper: #F6F3EE;
+  --surface: #FFFFFF;
+  --accent: oklch(0.950 0.023 111);
+  --accent-soft: #F0DCD2;
+  --line: #D8D2C8;
+  --muted: #5C6672;
+  --heroheadline: "DM Sans", system-ui, sans-serif;
+  --sectionheading:"DM Sans", system-ui, sans-serif;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    margin: 0;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header nav nav"
+        "hero hero hero"
+        "sidebar main main"
+        "footer footer footer";
+}
+
+header {grid-area: header;}
+nav { grid-area: nav;}
+.hero {grid-area: hero;}
+aside {grid-area: sidebar;}
+main {grid-area: main;}
+footer {grid-area: footer;}
+
+footer {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+}
+
+.cards{
+    display: grid;
+    min-height: 100vh;
+    margin: 0;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "a a b"
+        "c d e";
+}
+
+.card1 {
+    grid-area: a;
+}
+
+.card2 {
+    grid-area: b;
+}
+
+.card3 {
+    grid-area: c;
+}
+
+.card4 {
+    grid-area: d;
+}
+
+.card5 {
+    grid-area: e;
+}
+
+.hero {
+    background-color: var(--ink);
+}
+
+main {
+    width: 100vw;
+    background-color: var(--paper);
+}
+
+footer{
+    background-color: var(--ink);
+}
+
+.heroheadline {
+    color: var(--paper);
+}
