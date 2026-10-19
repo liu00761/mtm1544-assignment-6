@@ -146,7 +146,7 @@ aside {
 }
 
 .card1 img {
-    width: 600px;
+    min-width: 600px;
     height:180px;
 }
 
@@ -156,7 +156,7 @@ aside {
 }
 
 .card2 img {
-    width: 288px;
+    min-width: 288px;
     height: 180px;
 }
 
@@ -166,7 +166,7 @@ aside {
 }
 
 .card3 img {
-    width: 288px;
+    min-width: 288px;
     height: 180px;
 }
 
@@ -176,7 +176,7 @@ aside {
 }
 
 .card4 img {
-    width: 288px;
+    min-width: 288px;
     height: 180px;
 }
 
@@ -186,7 +186,7 @@ aside {
 }
 
 .card5 img {
-    width: 288px;
+    min-width: 288px;
     height: 180px;
 }
 
