@@ -14,14 +14,12 @@
   --sectionheading:"Inter", system-ui, sans-serif;
 }
 
+/* using grid for page layout */
 body {
-    width: 1200px;
-    margin-left: 120px;
-    margin-right: 120px;
     font-family: Inter;
     display: grid;
     gap: auto;
-    grid-template-columns: 20% 75%;
+    grid-template-columns: 20% 70%;
     grid-template-rows: auto;
     grid-template-areas:
         "header nav nav"
@@ -49,14 +47,20 @@ footer {
     flex-direction: row;
 }
 
+/* using flex for the navigation items so they're all laid out in a horizontal row */
 .navbar {
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
     gap: 32px;
 }
 
 ul {
     list-style-type: none;
+}
+
+.firstnav a{
+    font-weight: bold;
 }
 
 a  {
@@ -105,6 +109,7 @@ button {
 
 aside {
     background-color: var(--paper);
+    padding: 1em;
 }
 
 .browseby {
@@ -117,15 +122,14 @@ aside {
     background-color: var(--accent-soft);
 }
 
+/* using grid for these card because they have different sizes and multiple rows */
 .cards{
     display: grid;
     min-height: 100vh;
     margin: 0;
-    grid-template-rows: auto;
-    grid-template-areas: 
-        "a a b"
-        "c d e";
-    row-gap: 2em;
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) 1fr 1fr;
+    gap: 2em;
 }
 
 .cards article {
@@ -133,8 +137,11 @@ aside {
     border: 1px solid #D8D2C8;
 }
 
+
+/* grid-column span */
 .card1 {
-    grid-area: a;
+    grid-column: 1/2 span;
+    grid-row: 1/2;
     width: 600px;
 }
 
@@ -144,8 +151,8 @@ aside {
 }
 
 .card2 {
-    grid-area: b;
-    width: 288px;
+    grid-column: 3/4;
+    grid-row: 1/2;
 }
 
 .card2 img {
@@ -154,8 +161,8 @@ aside {
 }
 
 .card3 {
-    grid-area: c;
-    width: 288px;
+    grid-column: 1/2;
+    grid-row: 2/3;
 }
 
 .card3 img {
@@ -164,8 +171,8 @@ aside {
 }
 
 .card4 {
-    grid-area: d;
-    width: 288px;
+    grid-column: 2/3;
+    grid-row: 2/3;
 }
 
 .card4 img {
@@ -174,8 +181,8 @@ aside {
 }
 
 .card5 {
-    grid-area: e;
-    width: 288px;
+    grid-column: 3/4;
+    grid-row: 2/3;
 }
 
 .card5 img {
@@ -219,6 +226,7 @@ main {
     background-color: var(--paper);
 }
 
+/* using flex to lay out groups in a horizontal row */
 footer{
     background-color: var(--ink);
     display: flex;
