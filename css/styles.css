@@ -2,6 +2,11 @@
    box-sizing: border-box;
   }
 
+  img{
+    width: 100%;
+    height: auto;
+  }
+
 :root{
   --ink: #14202E;
   --paper: #F6F3EE;
@@ -17,6 +22,7 @@
 /* using grid for page layout */
 body {
     font-family: Inter;
+    margin: 0;
     display: grid;
     gap: auto;
     grid-template-columns: 20% 70%;
@@ -118,8 +124,15 @@ aside {
     text-transform: uppercase;
 }
 
+.browseby li a{
+    line-height: 24px;
+}
+
 .redbox {
     background-color: var(--accent-soft);
+    padding: .75em;
+    margin: .5em;
+    min-width: 100px;
 }
 
 /* using grid for these card because they have different sizes and multiple rows */
@@ -127,7 +140,7 @@ aside {
     display: grid;
     min-height: 100vh;
     margin: 0;
-    grid-template-rows: auto 1fr 1fr;
+    grid-template-rows: auto;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) 1fr 1fr;
     gap: 2em;
 }
@@ -137,17 +150,16 @@ aside {
     border: 1px solid #D8D2C8;
 }
 
-
 /* grid-column span */
 .card1 {
     grid-column: 1/2 span;
     grid-row: 1/2;
-    width: 600px;
+    width: 100%;
 }
 
 .card1 img {
-    min-width: 600px;
-    height:180px;
+    width: 100%;
+    height: auto;
 }
 
 .card2 {
@@ -156,8 +168,8 @@ aside {
 }
 
 .card2 img {
-    min-width: 288px;
-    height: 180px;
+    width: 100%;
+    height: auto;
 }
 
 .card3 {
@@ -166,8 +178,8 @@ aside {
 }
 
 .card3 img {
-    min-width: 288px;
-    height: 180px;
+    width: 100%;
+    height: auto;
 }
 
 .card4 {
@@ -176,8 +188,8 @@ aside {
 }
 
 .card4 img {
-    min-width: 288px;
-    height: 180px;
+    width: 100%;
+    height: auto;
 }
 
 .card5 {
@@ -186,8 +198,8 @@ aside {
 }
 
 .card5 img {
-    min-width: 288px;
-    height: 180px;
+    width: 100%;
+    height: auto;
 }
 
 .cardeyebrow {
